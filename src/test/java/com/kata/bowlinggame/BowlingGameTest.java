@@ -11,6 +11,7 @@ public class BowlingGameTest {
 
 	@Before
 	public void setUp() {
+		// Initialize a new instance of BowlingGame before each test case
 		bowlingGame = new BowlingGame();
 	}
 
@@ -22,12 +23,14 @@ public class BowlingGameTest {
 	}
 
 	private int spare() {
+		// Simulate rolling a spare and calculate the total score
 		int firstRoll = bowlingGame.roll(5);
 		int secondRoll = bowlingGame.roll(5);
 		return firstRoll + secondRoll;
 	}
 
 	private int strike() {
+		 // Simulate rolling a strike and calculate the total score
 		return bowlingGame.roll(10);
 	}
 
@@ -74,6 +77,7 @@ public class BowlingGameTest {
 	}
 
 	private void rollMany(int n, int pins) {
+		 // Roll the ball multiple times with specified pins knocked down
 		for (int i = 0; i < n; i++) {
 			bowlingGame.roll(pins);
 		}
